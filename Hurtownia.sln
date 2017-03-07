@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hurtownia", "Hurtownia\Hurtownia.csproj", "{4A6BBF5D-73FB-4B89-A1D1-CFF7A2078303}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Magazyn", "..\Magazyn\Magazyn\Magazyn.csproj", "{81F76B43-39AF-41AA-A0E1-A0255B65E986}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Magazyn", "Magazyn\Magazyn.csproj", "{81F76B43-39AF-41AA-A0E1-A0255B65E986}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
