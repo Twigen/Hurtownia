@@ -1,0 +1,49 @@
+﻿<Window x:Class="Hurtownia.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Hurtownia"
+        xmlns:viewModels="clr-namespace:Hurtownia.ViewModels"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525" SizeToContent="WidthAndHeight">
+    <Grid>
+        <Grid.DataContext>
+            <viewModels:MainWindowViewModel/>
+        </Grid.DataContext>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" FontSize="20">1. Wyswietl Opis</Label>
+            <Button Grid.Row="1" Content="Opis" Command="{Binding Path=ShowInfoCommand}"/>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" FontSize="20">2. Kontrachent</Label>
+            <Button Grid.Row="1" Content="Aktualizacja" Margin="5" Command="{Binding Path=AddContractorCommand}"/>
+            <Button Grid.Row="2" Content="Lista/wydruk" Margin="5" Command="{Binding Path=ShowContractorListCommand}"/>
+        </Grid>
+        <Grid Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" FontSize="20">3. Magazyn</Label>
+            <Button Grid.Row="1" Margin="5" Content="Aktualizacja"/>
+            <Button Grid.Row="2" Margin="5" Content="Lista/wydruk"/>
+        </Grid>
+        
+    </Grid>
+</Window>
