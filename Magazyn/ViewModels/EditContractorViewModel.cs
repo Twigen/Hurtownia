@@ -26,17 +26,17 @@ namespace Magazyn.ViewModels
 
         private RelayCommand _addContractorCommand;
 
-        public RelayCommand AddcontractorCommand
+        public RelayCommand AddContractorCommand
         {
             get
             {
                 if (_addContractorCommand == null)
-                    _addContractorCommand = new RelayCommand(ExecuteAddcontractorCommandAction);
+                    _addContractorCommand = new RelayCommand(ExecuteAddContractorCommandAction);
                 return _addContractorCommand;
             }
         }
 
-        private void ExecuteAddcontractorCommandAction()
+        private void ExecuteAddContractorCommandAction()
         {
             if (Contractor == null)
                 return;

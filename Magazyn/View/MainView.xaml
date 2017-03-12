@@ -6,9 +6,12 @@
         xmlns:local="clr-namespace:Magazyn"
         mc:Ignorable="d"
         xmlns:viewModels="clr-namespace:Magazyn.ViewModels"
-        d:DataContext="{d:DesignInstance viewModels:MainViewModel, IsDesignTimeCreatable=True}"
+        
         Title="MainView" Height="350" Width="700">
     <Grid>
+        <Grid.DataContext>
+            <viewModels:MainViewModel/>
+        </Grid.DataContext>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"></RowDefinition>
             <RowDefinition Height="Auto"></RowDefinition>

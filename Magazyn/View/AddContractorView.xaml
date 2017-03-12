@@ -6,9 +6,11 @@
         xmlns:local="clr-namespace:Magazyn.View"
         mc:Ignorable="d"
         xmlns:viewModels="clr-namespace:Magazyn.ViewModels"
-        d:DataContext="{d:DesignInstance viewModels:AddContractorViewModel, IsDesignTimeCreatable=True}"
         Title="AddContractorView" Height="500" Width="300">
     <Grid>
+        <Grid.DataContext>
+            <viewModels:AddContractorViewModel/>
+        </Grid.DataContext>
         <StackPanel Orientation="Vertical">
             <StackPanel Orientation="Horizontal">
                 <TextBlock  Text="Znak" ></TextBlock>
