@@ -62,5 +62,23 @@ namespace Hurtownia.ViewModels
         {
             MessageBox.Show("Witaj w Hurtowni");
         }
+
+        private RelayCommand _magInfoCommand;
+
+        public RelayCommand MagInfoCommand
+        {
+            get
+            {
+                if (_magInfoCommand == null)
+                    _magInfoCommand = new RelayCommand(ExecuteMagInfoCommandAction);
+                return _magInfoCommand;
+            }
+        }
+
+        private void ExecuteMagInfoCommandAction()
+        {
+            MessageBox.Show("Nie oprogramowano");
+        }
+
     }
 }

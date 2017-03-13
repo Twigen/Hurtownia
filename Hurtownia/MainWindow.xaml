@@ -6,7 +6,9 @@
         xmlns:local="clr-namespace:Hurtownia"
         xmlns:viewModels="clr-namespace:Hurtownia.ViewModels"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525" SizeToContent="WidthAndHeight">
+        Title="MainWindow"  
+        WindowState="Maximized"
+        >
     <Grid>
         <Grid.DataContext>
             <viewModels:MainWindowViewModel/>
@@ -15,14 +17,17 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
         </Grid.RowDefinitions>
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <Label Grid.Row="0" FontSize="20">1. Wyswietl Opis</Label>
-            <Button Grid.Row="1" Content="Opis" Command="{Binding Path=ShowInfoCommand}"/>
+            <Label Grid.Row="0" FontSize="20">1. Opis Podsystemu</Label>
+            <Button Grid.Row="1" Content="Brak dokumentacji" HorizontalContentAlignment="Left" Command="{Binding Path=ShowInfoCommand}"/>
         </Grid>
         <Grid Grid.Row="1">
             <Grid.RowDefinitions>
@@ -31,8 +36,8 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <Label Grid.Row="0" FontSize="20">2. Kontrachent</Label>
-            <Button Grid.Row="1" Content="Aktualizacja" Margin="5" Command="{Binding Path=AddContractorCommand}"/>
-            <Button Grid.Row="2" Content="Lista/wydruk" Margin="5" Command="{Binding Path=ShowContractorListCommand}"/>
+            <Button Grid.Row="1" HorizontalContentAlignment="Left" Content="Aktualizacja" Margin="5" Command="{Binding Path=AddContractorCommand}"/>
+            <Button Grid.Row="2" HorizontalContentAlignment="Left"  Content="Lista/wydruk" Margin="5" Command="{Binding Path=ShowContractorListCommand}"/>
         </Grid>
         <Grid Grid.Row="2">
             <Grid.RowDefinitions>
@@ -41,9 +46,17 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <Label Grid.Row="0" FontSize="20">3. Magazyn</Label>
-            <Button Grid.Row="1" Margin="5" Content="Aktualizacja"/>
-            <Button Grid.Row="2" Margin="5" Content="Lista/wydruk"/>
+            <Button Grid.Row="1" HorizontalContentAlignment="Left" Margin="5" Content="Aktualizacja" Command="{Binding Path=MagInfoCommand}"/>
+            <Button Grid.Row="2" HorizontalContentAlignment="Left" Margin="5" Content="Lista/wydruk" Command="{Binding Path=MagInfoCommand}"/>
         </Grid>
-        
+        <Grid Grid.Row="3">
+            <Button HorizontalContentAlignment="Left" Content="Nie oprogramowano" Command="{Binding Path=MagInfoCommand}"/>
+        </Grid>
+        <Grid Grid.Row="4">
+            <Button HorizontalContentAlignment="Left" Content="Nie oprogramowano" Command="{Binding Path=MagInfoCommand}"/>
+        </Grid>
+        <Grid Grid.Row="5">
+            <Button HorizontalContentAlignment="Left" Content="Nie oprogramowano" Command="{Binding Path=MagInfoCommand}"/>
+        </Grid>
     </Grid>
 </Window>
