@@ -45,8 +45,8 @@
             </DataGrid.Columns>
         </DataGrid>
         <StackPanel Orientation="Horizontal" Grid.Row="1">
-            <Button Content="Dodaj" Command="{Binding Path=AddContractorCommand}" Margin="0,0,5,0"/>
-            <Button Content="Popraw" Command="{Binding Path=EditContractorCommand}" Margin="0,0,5,0"/>
+            <Button Content="Dodaj" Command="{Binding Path=ShowAddContractorCommand}" Margin="0,0,5,0"/>
+            <Button Content="Popraw" Command="{Binding Path=ShowEditContractorCommand}" Margin="0,0,5,0"/>
             <Button Content="Usuń" Command="{Binding Path=RemoveContractorCommand}"/>
         </StackPanel>
     </Grid>

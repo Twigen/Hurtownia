@@ -110,6 +110,7 @@
       <DependentUpon>201703071936025_I7.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Repositories\ContractorRepository.cs" />
     <Compile Include="Repositories\MagRepository.cs" />
     <Compile Include="ViewModels\AddContractorViewModel.cs" />
     <Compile Include="ViewModels\ContractorViewModel.cs" />

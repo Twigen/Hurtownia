@@ -8,14 +8,23 @@ using GalaSoft.MvvmLight.Command;
 using Magazyn.Adapters;
 using Magazyn.Repositories;
 
+
+
+
 namespace Magazyn.ViewModels
 {
     public class EditContractorViewModel : ViewModelBase
     {
         private readonly MagRepository _magRepository;
+        private ContractorRepository _contractorRepository;
+        public static ContractorViewModel _Contractor;
+       // MessengerInstance.Register(this, ReciveContractor);
 
         public EditContractorViewModel()
         {
+            Contractor = _Contractor;
+           _magRepository = new MagRepository();
+            _contractorRepository = new ContractorRepository();
         }
 
         public EditContractorViewModel(ContractorViewModel contractor)
@@ -26,7 +35,7 @@ namespace Magazyn.ViewModels
 
         private RelayCommand _addContractorCommand;
 
-        public RelayCommand AddContractorCommand
+        public RelayCommand EditContractorCommand
         {
             get
             {
@@ -41,7 +50,7 @@ namespace Magazyn.ViewModels
             if (Contractor == null)
                 return;
 
-            _magRepository.EditContractor(Contractor);
+            _contractorRepository.EditContractor(Contractor);
             
         }
 

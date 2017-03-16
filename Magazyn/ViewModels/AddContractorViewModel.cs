@@ -12,11 +12,13 @@ namespace Magazyn.ViewModels
     public class AddContractorViewModel : ViewModelBase
     {
         private readonly MagRepository _magRepository;
+        private ContractorRepository _contractorRepository;
 
         public AddContractorViewModel()
         {
             Contractor = new ContractorViewModel();
             _magRepository = new MagRepository();
+            _contractorRepository = new ContractorRepository();
         }
 
         private RelayCommand _addContractorCommand;
@@ -36,7 +38,7 @@ namespace Magazyn.ViewModels
             if(Contractor == null)
                 return;
 
-            _magRepository.AddContractor(Contractor);
+            _contractorRepository.AddContractor(Contractor);
 
         }
 

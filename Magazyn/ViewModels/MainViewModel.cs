@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using GalaSoft.MvvmLight;
 using Magazyn.Adapters;
+using Magazyn.View;
 
 namespace Magazyn.ViewModels
 {
@@ -26,7 +27,7 @@ namespace Magazyn.ViewModels
 
         private RelayCommand _addContractorCommand;
 
-        public RelayCommand AddContractorCommand
+        public RelayCommand ShowAddContractorCommand
         {
             get
             {
@@ -38,9 +39,8 @@ namespace Magazyn.ViewModels
 
         private void ExecuteAddContractorCommandAction()
         {
-            var addContractorViewModel = new AddContractorViewModel();
-            var addContractorView = ViewService.CreateView(addContractorViewModel);
-            addContractorView.ShowDialog();
+            new AddContractorView().Show();
+           
         }
 
         private RelayCommand _removeContractorCommand;
@@ -70,7 +70,7 @@ namespace Magazyn.ViewModels
 
         private RelayCommand _editContractorCommand;
 
-        public RelayCommand EditContractorCommand
+        public RelayCommand ShowEditContractorCommand
         {
             get
             {
@@ -84,10 +84,10 @@ namespace Magazyn.ViewModels
         {
             if (SelectedContractor == null)
                 return;
-
-            var editContractorViewModel = new EditContractorViewModel(SelectedContractor);
-            var editContractorView = ViewService.CreateView(editContractorViewModel);
-            editContractorView.ShowDialog();
+            EditContractorViewModel._Contractor = SelectedContractor;
+          //  MessengerInstance.Send<ContractorViewModel>(SelectedContractor);
+            new EditContractorView().Show();
+        
         }
 
         private const string _contractorsPropertyName = "Contractors";

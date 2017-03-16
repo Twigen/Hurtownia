@@ -66,7 +66,7 @@
                 <TextBox Text="{Binding Path=Contractor.TlmK}" Width="100" Margin="5"></TextBox>
             </StackPanel>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" >
-                <Button Content="Edytuj" Command="{Binding Path=AddContractorCommand}" />
+                <Button Content="Edytuj" Command="{Binding Path=EditContractorCommand}" />
             </StackPanel>
         </StackPanel>
     </Grid>
