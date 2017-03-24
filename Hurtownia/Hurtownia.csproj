@@ -129,9 +129,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Magazyn\Magazyn.csproj">
+    <ProjectReference Include="..\Kontrachent\Kontrachent.csproj">
       <Project>{81f76b43-39af-41aa-a0e1-a0255b65e986}</Project>
-      <Name>Magazyn</Name>
+      <Name>Kontrachent</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

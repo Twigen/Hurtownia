@@ -5,8 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using GalaSoft.MvvmLight.Command;
-using Magazyn;
-using Magazyn.View;
+using Kontrachent;
+using Kontrachent.View;
 
 namespace Hurtownia.ViewModels
 {

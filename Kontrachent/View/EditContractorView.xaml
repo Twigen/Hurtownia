@@ -1,0 +1,74 @@
+﻿<Window x:Class="Kontrachent.View.EditContractorView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kontrachent.View"
+        mc:Ignorable="d"
+        xmlns:viewModels="clr-namespace:Kontrachent.ViewModels"
+        WindowStartupLocation="Manual"
+        Top="200" Left="1000"
+        Title="EditContractorView" Height="424.567" Width="300">
+    <Grid Margin="0,0,-0.4,-49.6">
+        <Grid.DataContext>
+            <viewModels:EditContractorViewModel/>
+        </Grid.DataContext>
+        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock  Text="Znak" ></TextBlock>
+                <TextBox Text="{Binding Path=Contractor.Znak}" Width="100" Margin="5"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock  Text="SkrotK"></TextBlock>
+                <TextBox Text="{Binding Path=Contractor.SkrotK}" Width="100" Margin="5"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock  Text="Regon"></TextBlock>
+                <TextBox Text="{Binding Path=Contractor.Regon}" Width="100" Margin="5"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock  Text="Kod NIP"></TextBlock>
+                <TextBox Text="{Binding Path=Contractor.Kodnip}" Width="100" Margin="5"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock  Text="NIP"></TextBlock>
+                <TextBox Text="{Binding Path=Contractor.Nip}" Width="100" Margin="5"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock  Text="Nazk1"></TextBlock>
+                <TextBox Text="{Binding Path=Contractor.Nazk1}" Width="100" Margin="5"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock  Text="Nazk2"></TextBlock>
+                <TextBox Text="{Binding Path=Contractor.Nazk2}" Width="100" Margin="5"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock  Text="Kod pocztowy"></TextBlock>
+                <TextBox Text="{Binding Path=Contractor.KodpoczK}" Width="100" Margin="5"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock  Text="Miejsce"></TextBlock>
+                <TextBox Text="{Binding Path=Contractor.MiejsceK}" Width="100" Margin="5"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock  Text="Ulica"></TextBlock>
+                <TextBox Text="{Binding Path=Contractor.UlicaK}" Width="100" Margin="5"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock  Text="NrMk"></TextBlock>
+                <TextBox Text="{Binding Path=Contractor.NrmK}" Width="100" Margin="5"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock  Text="Tel"></TextBlock>
+                <TextBox Text="{Binding Path=Contractor.TelK}" Width="100" Margin="5"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock  Text="TLMK"></TextBlock>
+                <TextBox Text="{Binding Path=Contractor.TlmK}" Width="100" Margin="5"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" >
+                <Button Content="Edytuj" Command="{Binding Path=EditContractorCommand}" />
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

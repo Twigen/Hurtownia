@@ -5,8 +5,6 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
-using Magazyn.Adapters;
-using Magazyn.ViewModels;
 
 namespace Magazyn
 {
@@ -15,11 +13,5 @@ namespace Magazyn
     /// </summary>
     public partial class App : Application
     {
-        protected override void OnStartup(StartupEventArgs e)
-        {
-            var mainViewModel = new MainViewModel();
-            var mainView = ViewService.CreateView(mainViewModel);
-            mainView.ShowDialog();
-        }
     }
 }

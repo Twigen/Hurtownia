@@ -6,28 +6,29 @@
         xmlns:local="clr-namespace:Hurtownia"
         xmlns:viewModels="clr-namespace:Hurtownia.ViewModels"
         mc:Ignorable="d"
-        Title="MainWindow"  
-        WindowState="Maximized"
-        >
+        Title="MainWindow" 
+        Height="600"
+        Width="800">
     <Grid>
         <Grid.DataContext>
             <viewModels:MainWindowViewModel/>
         </Grid.DataContext>
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="30"/>
-            <RowDefinition Height="30"/>
-            <RowDefinition Height="30"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+                <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <Label Grid.Row="0" FontSize="20">1. Opis Podsystemu</Label>
-            <Button Grid.Row="1" Content="Brak dokumentacji" HorizontalContentAlignment="Left" Command="{Binding Path=ShowInfoCommand}"/>
+            <Label Grid.Row="0" FontSize="40">1. Opis systemu</Label>
+            <Button Grid.Row="1" Content="Brak dokumentacji" HorizontalContentAlignment="Left" FontSize="30" Command="{Binding Path=ShowInfoCommand}"/>
         </Grid>
         <Grid Grid.Row="1" >
             <Grid.RowDefinitions>
@@ -36,33 +37,65 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <StackPanel Orientation="Horizontal">
-            <Label Grid.Row="0" FontSize="20" Width="Auto" Height="Auto">2. Kontrachent</Label>
-            <Expander Grid.Row="1" IsExpanded="False" HorizontalContentAlignment="Left" FlowDirection="RightToLeft">
-                <StackPanel>
-            <Button Grid.Row="1" HorizontalContentAlignment="Left" Content="Aktualizacja" Margin="5" Command="{Binding Path=AddContractorCommand}"/>
-            <Button Grid.Row="2" HorizontalContentAlignment="Left" Content="Lista/Wydruk"  Margin="5" Command="{Binding Path=ShowContractorListCommand}"/>
-                </StackPanel>
-            </Expander>
+                <Label   Width="Auto" Height="Auto" FontSize="40">2. KONTRACHENT</Label>
+                <Expander  IsExpanded="False" HorizontalContentAlignment="Left" >
+                    <StackPanel>
+                        <Button HorizontalContentAlignment="Left" Content="1. Opis podsystemu" FontSize="30"/>
+                        <Label Content="2. OBSLUGA KARTOTEKI" FontSize="30"/>
+                        <Expander>
+                            <StackPanel>
+                            <Button FontSize="30" HorizontalContentAlignment="Left" Content="Aktualizacja"  Command="{Binding Path=AddContractorCommand}"/>
+                            <Button FontSize="30" HorizontalContentAlignment="Left" Content="Lista/Wydruk"   Command="{Binding Path=ShowContractorListCommand}"/>
+                            </StackPanel>
+                        </Expander>
+                        <Button FontSize="30" Content="3. ZOBOWIAZANIA"/>
+                        <Button FontSize="30" Content="4. SLOWNIKI"/>
+                        <Button FontSize="30" Content="5. WYDAWNICTWA"/>
+                    </StackPanel>
+                </Expander>
             </StackPanel>
         </Grid>
         <Grid Grid.Row="2">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
-            <Label Grid.Row="0" FontSize="20">3. Magazyn</Label>
-            <Button Grid.Row="1" HorizontalContentAlignment="Left" Margin="5" Content="Aktualizacja" Command="{Binding Path=MagInfoCommand}"/>
-            <Button Grid.Row="2" HorizontalContentAlignment="Left" Margin="5" Content="Lista/wydruk" Command="{Binding Path=MagInfoCommand}"/>
+            <StackPanel Orientation="Horizontal"  Margin="0,0,-0.4,0.2">
+                <Label FontSize="40" HorizontalAlignment="Left" Margin="0,0,-0.4,0.6">3. MAGAZYN</Label>
+                <Expander HorizontalContentAlignment="Right" >
+                    <StackPanel>
+                        <Button FontSize="30" Content="1. Opis zagadnienia"/>
+                        <Label FontSize="30" Content="2. OBSLUGA MAGAZYNU"/>
+                        <Expander>
+                            <StackPanel>
+                                <Button FontSize="30" HorizontalContentAlignment="Left"  Content="Aktualizacja" Command="{Binding Path=MagInfoCommand}"/>
+                                <Button FontSize="30" HorizontalContentAlignment="Left"  Content="Lista/wydruk" Command="{Binding Path=MagInfoCommand}"/>
+                            </StackPanel>
+                        </Expander>
+                        <Button FontSize="30" Content="3. TRANSAKCJE"/>
+                        <Button FontSize="30" Content="4. INWENTARYZACJA"/>
+                        <Button FontSize="30" Content="5. WYDAWNICTWA"/>
+                        <Button FontSize="30" Content="6. SLOWNIKI"></Button>
+                    </StackPanel>
+                </Expander>
+            </StackPanel>
         </Grid>
         <Grid Grid.Row="3">
-            <Button HorizontalContentAlignment="Left" Content="Nie oprogramowano" Command="{Binding Path=MagInfoCommand}"/>
-        </Grid>
-        <Grid Grid.Row="4">
-            <Button HorizontalContentAlignment="Left" Content="Nie oprogramowano" Command="{Binding Path=MagInfoCommand}"/>
         </Grid>
         <Grid Grid.Row="5">
-            <Button HorizontalContentAlignment="Left" Content="Nie oprogramowano" Command="{Binding Path=MagInfoCommand}"/>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="FUNKCJE SYSTEMOWE" FontSize="40"/>
+                <Expander>
+                    <StackPanel>
+                        <Button FontSize="30" Content="1. Opis zagadnienia"/>
+                        <Button FontSize="30" Content="2. Reorganizacja BAZ DANYCH"/>
+                        <Button FontSize="30" Content="3. Kontrola ZBIOROW"/>
+                        <Button FontSize="30" Content="4. Numery dokumentow"/>
+                        <Button FontSize="30" Content="5. Kopia BEZPIECZENSTWA"/>
+                        <Button FontSize="30" Content="6. Rezerwa"/>
+                        <Button FontSize="30" Content="7. Nazwa zakladu"/>
+                    </StackPanel>
+                </Expander>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="6">
+            <Button FontSize="30" HorizontalContentAlignment="Left" Content="Nie oprogramowano" Command="{Binding Path=MagInfoCommand}"/>
         </Grid>
     </Grid>
 </Window>
