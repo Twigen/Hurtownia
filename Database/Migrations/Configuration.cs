@@ -1,4 +1,4 @@
-using Kontrachent.Data;
+using Database.Data;
 
 namespace Kontrachent.Migrations
 {

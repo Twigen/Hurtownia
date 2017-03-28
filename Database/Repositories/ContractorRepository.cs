@@ -5,8 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using GalaSoft.MvvmLight.Helpers;
-using Kontrachent.Data;
+using Database.Data;
 using Kontrachent.ViewModels;
+
 
 namespace Kontrachent.Repositories
 {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Kontrachent.Data;
+using Database.Data;
 using Kontrachent.ViewModels;
 
 namespace Kontrachent.Repositories

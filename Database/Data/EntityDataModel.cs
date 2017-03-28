@@ -1,4 +1,6 @@
-namespace Kontrachent.Data
+using Database.Data;
+
+namespace Database.Data
 {
     using System;
     using System.Data.Entity;

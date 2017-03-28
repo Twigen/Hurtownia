@@ -7,22 +7,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using GalaSoft.MvvmLight;
-using Kontrachent.Repositories;
+using HurtowniaDB.Repositories;
 using Kontrachent.View;
 using Kontrachent.Adapters;
+using Magazyn.Mappers;
 
 namespace Kontrachent.ViewModels
 {
     public class MainViewModel : ViewModelBase
     {
-        private readonly MagRepository _contractorRepository;
+        private readonly ContractorRepository _contractorRepository;
 
         public MainViewModel()
         {
-            _contractorRepository = new MagRepository();
+            _contractorRepository = new ContractorRepository();
             Contractors =
                 new ObservableCollection<ContractorViewModel>(
-                    _contractorRepository.GetContractors());
+                    _contractorRepository.GetContractors().Select(p => ContractorMapper.ConvertToViewModel(p)));
         }
 
         private RelayCommand _addContractorCommand;

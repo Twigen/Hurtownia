@@ -1,4 +1,4 @@
-namespace Kontrachent.Data
+namespace Database.Data
 {
     using System;
     using System.Collections.Generic;

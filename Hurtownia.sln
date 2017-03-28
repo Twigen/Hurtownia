@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kontrachent", "Kontrachent\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Magazyn", "Magazyn\Magazyn.csproj", "{3C7121C3-E3CB-4C03-9A36-8E6BDB4833AF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Database", "Database\Database.csproj", "{73385C94-9EEA-49D7-A011-D70E709E6918}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HurtowniaDB", "HurtowniaDB\HurtowniaDB.csproj", "{8F1A201D-2FA7-4A44-A642-E81942FA3112}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{3C7121C3-E3CB-4C03-9A36-8E6BDB4833AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3C7121C3-E3CB-4C03-9A36-8E6BDB4833AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3C7121C3-E3CB-4C03-9A36-8E6BDB4833AF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{73385C94-9EEA-49D7-A011-D70E709E6918}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{73385C94-9EEA-49D7-A011-D70E709E6918}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{73385C94-9EEA-49D7-A011-D70E709E6918}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{73385C94-9EEA-49D7-A011-D70E709E6918}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F1A201D-2FA7-4A44-A642-E81942FA3112}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F1A201D-2FA7-4A44-A642-E81942FA3112}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F1A201D-2FA7-4A44-A642-E81942FA3112}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F1A201D-2FA7-4A44-A642-E81942FA3112}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Database.Data;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
-using Kontrachent.Repositories;
+using HurtowniaDB.Repositories;
+using HurtowniaDB;
+using Magazyn.Mappers;
 
 namespace Kontrachent.ViewModels
 {
@@ -37,8 +40,8 @@ namespace Kontrachent.ViewModels
         {
             if(Contractor == null)
                 return;
-
-            _contractorRepository.AddContractor(Contractor);
+            Contractor contractorEntity = ContractorMapper.ConvertToEntity(Contractor);
+            _contractorRepository.AddContractor(contractorEntity);
 
         }
 
