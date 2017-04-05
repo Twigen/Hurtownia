@@ -8,7 +8,7 @@ using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
 using HurtowniaDB.Repositories;
 using HurtowniaDB;
-using Magazyn.Mappers;
+using Kontrachent.Mappers;
 
 namespace Kontrachent.ViewModels
 {

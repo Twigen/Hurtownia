@@ -53,7 +53,7 @@ namespace Kontrachent.View {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Magazyn;component/view/editcontractorview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Kontrachent;component/view/editcontractorview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\View\EditContractorView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

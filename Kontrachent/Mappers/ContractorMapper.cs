@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Database.Data;
 using Kontrachent.ViewModels;
 
-namespace Magazyn.Mappers
+namespace Kontrachent.Mappers
 {
     static public class ContractorMapper
     {

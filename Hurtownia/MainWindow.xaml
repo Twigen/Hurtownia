@@ -64,14 +64,14 @@
                         <Label FontSize="30" Content="2. OBSLUGA MAGAZYNU"/>
                         <Expander>
                             <StackPanel>
-                                <Button FontSize="30" HorizontalContentAlignment="Left"  Content="Aktualizacja" Command="{Binding Path=MagInfoCommand}"/>
-                                <Button FontSize="30" HorizontalContentAlignment="Left"  Content="Lista/wydruk" Command="{Binding Path=MagInfoCommand}"/>
+                                <Button FontSize="30" HorizontalContentAlignment="Left"  Content="Aktualizacja" Command="{Binding Path=ShowAddStorehouseItemCommand}"/>
+                                <Button FontSize="30" HorizontalContentAlignment="Left"  Content="Lista/wydruk" Command="{Binding Path=OpenStorehouseListCommand}"/>
                             </StackPanel>
                         </Expander>
                         <Button FontSize="30" Content="3. TRANSAKCJE"/>
                         <Button FontSize="30" Content="4. INWENTARYZACJA"/>
                         <Button FontSize="30" Content="5. WYDAWNICTWA"/>
-                        <Button FontSize="30" Content="6. SLOWNIKI"></Button>
+                        <Button FontSize="30" Content="6. SLOWNIKI" Command="{Binding Path=ShowStorehouseDictionariesCommand}"></Button>
                     </StackPanel>
                 </Expander>
             </StackPanel>

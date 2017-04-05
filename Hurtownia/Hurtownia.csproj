@@ -133,6 +133,10 @@
       <Project>{81f76b43-39af-41aa-a0e1-a0255b65e986}</Project>
       <Name>Kontrachent</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Magazyn\Magazyn.csproj">
+      <Project>{3c7121c3-e3cb-4c03-9a36-8e6bdb4833af}</Project>
+      <Name>Magazyn</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

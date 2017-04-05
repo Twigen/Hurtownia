@@ -1,0 +1,58 @@
+﻿<Window x:Class="Magazyn.MainWindow.ListStorehouseItemsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        
+        xmlns:viewModels="clr-namespace:Magazyn.ViewModels"
+        mc:Ignorable="d"
+        Title="ListStorehouseItemsWindow" Height="300" Width="300">
+    <!--:local="clr-namespace:Magazyn" -->
+    <Grid>
+        <Grid.DataContext>
+            <viewModels:ListStorehouseItemsViewModel/>
+        </Grid.DataContext>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <DataGrid ItemsSource="{Binding Path=Storehouses}" SelectedItem="{Binding Path=SelectedStorehouseItem}" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Path=Znak}" Header="Znak"/>
+                <DataGridTextColumn Binding="{Binding Path=Magaz}" Header="Magaz"/>
+                <DataGridTextColumn Binding="{Binding Path=Ktm}" Header="Ktm"/>
+                <DataGridTextColumn Binding="{Binding Path=Ck}" Header="Ck"/>
+                <DataGridTextColumn Binding="{Binding Path=Nazwak}" Header="Nazwak"/>
+                <DataGridTextColumn Binding="{Binding Path=Wielk}" Header="Wielk"/>
+                <DataGridTextColumn Binding="{Binding Path=Cena}" Header="Cena"/>
+                <DataGridTextColumn Binding="{Binding Path=Cena2}" Header="Cena2"/>
+                <DataGridTextColumn Binding="{Binding Path=Vat}" Header="Vat"/>
+                <DataGridTextColumn Binding="{Binding Path=Jme}" Header="Jme"/>
+                <DataGridTextColumn Binding="{Binding Path=Stanpi}" Header="Stanpi"/>
+                <DataGridTextColumn Binding="{Binding Path=Pik}" Header="Pik"/>
+                <DataGridTextColumn Binding="{Binding Path=Rik}" Header="Rik"/>
+                <DataGridTextColumn Binding="{Binding Path=Stanki}" Header="Stanki"/>
+                <DataGridTextColumn Binding="{Binding Path=Stanog}" Header="Stanog"/>
+                <DataGridTextColumn Binding="{Binding Path=Stanpw}" Header="Stanpw"/>
+                <DataGridTextColumn Binding="{Binding Path=Pwk}" Header="Pwk"/>
+                <DataGridTextColumn Binding="{Binding Path=Rwk}" Header="Rwk"/>
+                <DataGridTextColumn Binding="{Binding Path=Stankw}" Header="Stankw"/>
+                <DataGridTextColumn Binding="{Binding Path=Przecall}" Header="Przecall"/>
+                <DataGridTextColumn Binding="{Binding Path=Pim}" Header="Pim"/>
+                <DataGridTextColumn Binding="{Binding Path=Rim}" Header="Rim"/>
+                <DataGridTextColumn Binding="{Binding Path=Pwm}" Header="Pwm"/>
+                <DataGridTextColumn Binding="{Binding Path=Rwm}" Header="Rwm"/>
+                <DataGridTextColumn Binding="{Binding Path=Datap}" Header="Datap"/>
+                <DataGridTextColumn Binding="{Binding Path=Datar}" Header="Datar"/>
+                <DataGridTextColumn Binding="{Binding Path=Spis}" Header="Spis"/>
+                <DataGridTextColumn Binding="{Binding Path=StanII}" Header="StanII"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <StackPanel Orientation="Horizontal" Grid.Row="1">
+            <Button Content="Dodaj" Command="{Binding Path=ShowAddStorehouseItemCommand}" Margin="0,0,5,0"/>
+            <Button Content="Popraw" Command="{Binding Path=ShowEditStorehouseItemCommand}" Margin="0,0,5,0"/>
+            <Button Content="Usuń" Command="{Binding Path=RemoveStorehouseItemCommand}"/>
+        </StackPanel>
+    </Grid>
+</Window>

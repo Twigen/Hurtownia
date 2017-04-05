@@ -1,0 +1,25 @@
+﻿<Window x:Class="Magazyn.DictionariesWindow.DisplayDictionariesWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Magazyn"
+        xmlns:dictionariesViewModels="clr-namespace:Magazyn.DictionariesViewModels"
+        mc:Ignorable="d"
+        Title="DisplayDictionariesWindow" Height="300" Width="300">
+    <Grid>
+        <Grid.DataContext>
+            <dictionariesViewModels:DisplayDictionariesViewModel/>
+        </Grid.DataContext>
+        <StackPanel Orientation="Vertical">
+        <StackPanel Orientation="Horizontal">
+            <TextBox Text="VAT"/>
+            <Button Content="Pokaz" Command="{Binding Path=ShowVatDictionaryCommand}" Height="25"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <TextBox Text="Jednostki miary"></TextBox>
+                <Button Content="Pokaz" Command="{Binding Path=ShowJmeDictionaryCommand}" Height="25"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

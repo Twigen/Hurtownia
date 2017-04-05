@@ -1,0 +1,157 @@
+﻿<Window x:Class="Magazyn.MainWindow.AddStorehouseItem"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Magazyn"
+        xmlns:viewModels="clr-namespace:Magazyn.ViewModels"
+        mc:Ignorable="d"
+        SizeToContent="WidthAndHeight"
+        Title="AddStorehouseItem" Height="300" Width="800">
+    <Grid>
+        <Grid.DataContext>
+            <viewModels:AddStorehouseItemViewModel/>
+        </Grid.DataContext>
+        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Horizontal">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock  Text="Nr.Katalogowy:"></TextBlock>
+                    <TextBox Text="{Binding Path=Storehouse.Ktm}" Width="300" Margin="5"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock  Text="Magaz:"></TextBlock>
+                    <TextBox Text="{Binding Path=Storehouse.Magaz}" Width="100" Margin="5"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock  Text="Vat:"></TextBlock>
+                    <TextBox Text="{Binding Path=Storehouse.Vat}" Width="20" Margin="5"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock  Text="Cena Zakupu:"></TextBlock>
+                    <TextBlock Text="{Binding Path=Storehouse.Cena2}"></TextBlock>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock  Text="Nazwa:"></TextBlock>
+                <TextBox Text="{Binding Path=Storehouse.Nazwak}" Width="400" Margin="5"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock  Text="Wielkosc:"></TextBlock>
+                    <TextBox Text="{Binding Path=Storehouse.Wielk}" Width="300" Margin="5"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock  Text="Stan Og:"></TextBlock>
+                    <TextBox Text="{Binding Path=Storehouse.Stanog}" Width="200" Margin="5"></TextBox>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock  Text="Jme:"></TextBlock>
+                    <TextBox Text="{Binding Path=Storehouse.Jme}" Width="30" Margin="5"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock  Text="Stan P.I.:"></TextBlock>
+                    <TextBox Text="{Binding Path=Storehouse.Stanpi}" Width="200" Margin="5"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock  Text="Stan K.I.:"></TextBlock>
+                    <TextBox Text="{Binding Path=Storehouse.Stanki}" Width="200" Margin="5"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock  Text="Cena sp:"></TextBlock>
+                    <TextBox Text="{Binding Path=Storehouse.Cena}" Width="150" Margin="5"></TextBox>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock  Text="Data prz:"></TextBlock>
+                    <TextBox Text="{Binding Path=Storehouse.Datap}" Width="100" Margin="5"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock  Text="Data roz"></TextBlock>
+                    <TextBox Text="{Binding Path=Storehouse.Datar}" Width="100" Margin="5"></TextBox>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" >
+                <Button Content="Zatwierdz" Command="{Binding Path=AddStorehouseItemCommand}" ></Button>
+            </StackPanel>
+        </StackPanel>
+        <!--
+            <StackPanel Orientation="Horizontal
+                <TextBlock  Text="Znak" ></TextBlock>
+                <TextBox Text="{Binding Path=Storehouse.Znak}" Width="100" Margin="5"></TextBox>
+            </StackPanel>
+            
+            
+            <StackPanel Orientation="Horizontal">
+                <TextBlock  Text="Ck"></TextBlock>
+                <TextBox Text="{Binding Path=Storehouse.Ck}" Width="100" Margin="5"></TextBox>
+            </StackPanel>
+
+            
+            
+            
+            
+            
+            
+            <StackPanel Orientation="Horizontal">
+                <TextBlock  Text="Pik"></TextBlock>
+                <TextBox Text="{Binding Path=Storehouse.Pik}" Width="100" Margin="5"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock  Text="Rik"></TextBlock>
+                <TextBox Text="{Binding Path=Storehouse.Rik}" Width="100" Margin="5"></TextBox>
+            </StackPanel>
+            
+            
+            <StackPanel Orientation="Horizontal">
+                <TextBlock  Text="Stanpw"></TextBlock>
+                <TextBox Text="{Binding Path=Storehouse.Stanpw}" Width="100" Margin="5"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock  Text="Pwk"></TextBlock>
+                <TextBox Text="{Binding Path=Storehouse.Pwk}" Width="100" Margin="5"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock  Text="Rwk"></TextBlock>
+                <TextBox Text="{Binding Path=Storehouse.Rwk}" Width="100" Margin="5"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock  Text="Stankw"></TextBlock>
+                <TextBox Text="{Binding Path=Storehouse.Stankw}" Width="100" Margin="5"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock  Text="Przecall"></TextBlock>
+                <TextBox Text="{Binding Path=Storehouse.Przecall}" Width="100" Margin="5"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock  Text="Pim"></TextBlock>
+                <TextBox Text="{Binding Path=Storehouse.Pim}" Width="100" Margin="5"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock  Text="Rim"></TextBlock>
+                <TextBox Text="{Binding Path=Storehouse.Rim}" Width="100" Margin="5"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock  Text="Pwm"></TextBlock>
+                <TextBox Text="{Binding Path=Storehouse.Pwm}" Width="100" Margin="5"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock  Text="Rwm"></TextBlock>
+                <TextBox Text="{Binding Path=Storehouse.Rwm}" Width="100" Margin="5"></TextBox>
+            </StackPanel>
+            
+            
+            <StackPanel Orientation="Horizontal">
+                <TextBlock  Text="Spis"></TextBlock>
+                <TextBox Text="{Binding Path=Storehouse.Spis}" Width="100" Margin="5"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock  Text="Stanii"></TextBlock>
+                <TextBox Text="{Binding Path=Storehouse.StanII}" Width="100" Margin="5"></TextBox>
+            </StackPanel>
+            
+        </StackPanel> -->
+    </Grid>
+</Window>

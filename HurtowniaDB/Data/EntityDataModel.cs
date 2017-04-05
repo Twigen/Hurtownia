@@ -1,4 +1,5 @@
 using Database.Data;
+using HurtowniaDB.Data;
 
 namespace Database.Data
 {
@@ -16,6 +17,11 @@ namespace Database.Data
 
         public virtual DbSet<Contractor> Contractor { get; set; }
         
+        public virtual DbSet<Storehouse> Storehouse { get; set; } 
+
+        public virtual DbSet<VatDictionary> VatDictionary { get; set; }
+
+        public virtual DbSet<JmeDictionary> JmeDictionary { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
