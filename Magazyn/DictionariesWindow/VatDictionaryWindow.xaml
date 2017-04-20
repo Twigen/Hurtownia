@@ -20,6 +20,7 @@
         </DataGrid>
         
         <StackPanel>
+            <Button Content="Dodaj" Width="100" Command="{Binding Path=ShowAddVatCommand}" HorizontalAlignment="Left"></Button>
         <Button  Content="Edytuj" Width="100" Command="{Binding Path=ShowEditVatCommand}" HorizontalAlignment="Left"/>
         </StackPanel>
         </StackPanel>

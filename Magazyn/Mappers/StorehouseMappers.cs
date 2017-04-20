@@ -88,25 +88,48 @@ namespace Magazyn.Mappers
         {
             return new VatViewModel
             {
+                ID = vatDictionary.ID,
                 Vat = vatDictionary.Vat,
                 Kod = vatDictionary.Kod
             };
         }
-
+        
         public static VatDictionary ConvertToVatDictionary(VatViewModel vatViewModel)
         {
             return new VatDictionary
             {
+                ID = vatViewModel.ID,
                 Kod = vatViewModel.Kod,
                 Vat = vatViewModel.Vat
 
             };
         }
-
+        
         public static JmeViewModel ConvertToVatViewModel(JmeDictionary jmeDictionary)
         {
             return new JmeViewModel
             {
+                ID = jmeDictionary.ID,
+                Jme = jmeDictionary.Jme,
+                Kod = jmeDictionary.Kod
+            };
+        }
+
+        public static JmeDictionary ConvertToJmeDictionary(JmeViewModel jmeViewModel)
+        {
+            return new JmeDictionary
+            {
+                ID = jmeViewModel.ID,
+                Jme = jmeViewModel.Jme,
+                Kod = jmeViewModel.Kod
+            };
+        }
+
+        public static JmeViewModel ConvertToJmeViewModel(JmeDictionary jmeDictionary)
+        {
+            return new JmeViewModel
+            {
+                ID = jmeDictionary.ID,
                 Jme = jmeDictionary.Jme,
                 Kod = jmeDictionary.Kod
             };

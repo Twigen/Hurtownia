@@ -42,18 +42,10 @@ namespace Magazyn.DictionariesViewModels
        {
             if (Vat == null)
                 return;
-            //  var vatEntity = StorehouseMappers.ConvertToVatDictionary(Vat);
-             
-            VatDictionary vatDictionary = new VatDictionary();
+            
+           VatDictionary vatEntity = StorehouseMappers.ConvertToVatDictionary(Vat);
           
-
-            using (var contex = new EntityDataModel())
-            {
-                vatDictionary = contex.VatDictionary.FirstOrDefault(p => p.Kod == selectedVatDictionary.Kod);
-            }
-           vatDictionary.Kod = Vat.Kod;
-           vatDictionary.Vat = Vat.Vat;
-            _dictionariesRepository.EditVatItem(vatDictionary);
+            _dictionariesRepository.EditVatItem(vatEntity);
         }
 
        private const string _vatPropertyName = "Vat";

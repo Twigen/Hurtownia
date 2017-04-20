@@ -11,11 +11,17 @@
         <Grid.DataContext>
             <dictionariesViewModels:JmeDictionaryViewModel/>
         </Grid.DataContext>
+        <StackPanel Orientation="Vertical">
         <DataGrid ItemsSource="{Binding Path=Jmes}" SelectedItem="{Binding Path=SelectedItem}" AutoGenerateColumns="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Path=Kod}" Header="Kod"/>
-                <DataGridTextColumn Binding="{Binding Path=Jme}" Header="Vat"/>
+                <DataGridTextColumn Binding="{Binding Path=Jme}" Header="Jme"/>
             </DataGrid.Columns>
         </DataGrid>
+            <StackPanel Orientation="Horizontal">
+            <Button Content="Dodaj" Width="100" HorizontalAlignment="Left" Command="{Binding Path=ShowAddJmeCommand}"></Button>
+            <Button Content="Edytuj" Width="100" HorizontalAlignment="Left" Command="{Binding Path=ShowEditJmeCommand}"></Button>
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </Window>

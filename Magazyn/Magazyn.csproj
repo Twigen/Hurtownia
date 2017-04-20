@@ -84,12 +84,24 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="DictionariesViewModels\AddJmeViewModel.cs" />
+    <Compile Include="DictionariesViewModels\AddVatViewModel.cs" />
+    <Compile Include="DictionariesViewModels\EditJmeViewModel.cs" />
     <Compile Include="DictionariesViewModels\EditVatViewModel.cs" />
     <Compile Include="DictionariesViewModels\JmeDictionaryViewModel.cs" />
     <Compile Include="DictionariesViewModels\JmeViewModel.cs" />
     <Compile Include="DictionariesViewModels\VatDictionaryViewModel.cs" />
+    <Compile Include="DictionariesWindow\AddJmeWindow.xaml.cs">
+      <DependentUpon>AddJmeWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DictionariesWindow\AddVatWindow.xaml.cs">
+      <DependentUpon>AddVatWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DictionariesWindow\DisplayDictionariesWindow.xaml.cs">
       <DependentUpon>DisplayDictionariesWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DictionariesWindow\EditJmeWindow.xaml.cs">
+      <DependentUpon>EditJmeWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="DictionariesWindow\EditVatWindow.xaml.cs">
       <DependentUpon>EditVatWindow.xaml</DependentUpon>
@@ -113,6 +125,18 @@
     <Compile Include="ViewModels\ListStorehouseItemsViewModel.cs" />
     <Compile Include="Mappers\StorehouseMappers.cs" />
     <Compile Include="ViewModels\StorehouseViewModel.cs" />
+    <Page Include="DictionariesWindow\AddJmeWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DictionariesWindow\AddVatWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DictionariesWindow\EditJmeWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="DictionariesWindow\EditVatWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using GalaSoft.MvvmLight;
 using HurtowniaDB.Repositories;
 using Magazyn.Mappers;
+using GalaSoft.MvvmLight.Command;
+using Magazyn.DictionariesWindow;
 
 namespace Magazyn.DictionariesViewModels
 {
@@ -46,6 +48,41 @@ namespace Magazyn.DictionariesViewModels
                 _selectedItem = value;
                 RaisePropertyChanged(_selectedItemPropertyName);
             }
+        }
+
+        private RelayCommand _showEditJmeCommand;
+
+        public RelayCommand ShowEditJmeCommand
+        {
+            get
+            {
+                if (_showEditJmeCommand == null)
+                    _showEditJmeCommand = new RelayCommand(ExecuteShowEditJmeCommandAction);
+                return _showEditJmeCommand;
+            }
+        }
+
+        private void ExecuteShowEditJmeCommandAction()
+        {
+            new EditJmeWindow().Show();
+            MessengerInstance.Send<JmeViewModel>(SelectedItem);
+        }
+
+        private RelayCommand _showAddJmeCommand;
+
+        public RelayCommand ShowAddJmeCommand
+        {
+            get
+            {
+                if (_showAddJmeCommand == null)
+                    _showAddJmeCommand = new RelayCommand(ExecuteShowAddJmeCommandAction);
+                return _showAddJmeCommand;
+            }
+        }
+
+        private void ExecuteShowAddJmeCommandAction()
+        {
+            new AddJmeWindow().Show();
         }
     }
 }

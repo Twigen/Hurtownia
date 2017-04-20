@@ -15,36 +15,37 @@ namespace Hurtownia.ViewModels
 {
     class MainWindowViewModel
     {
-        private RelayCommand _addContractorCommand;
 
-        public RelayCommand AddContractorCommand
+        public RelayCommand<Window> CloseWindowCommand { get; private set; }
+
+        public MainWindowViewModel()
         {
-            get
+            this.CloseWindowCommand = new RelayCommand<Window>(this.CloseWindow);
+        }
+
+        private void CloseWindow(Window window)
+        {
+            if (window != null)
             {
-                if (_addContractorCommand == null)
-                    _addContractorCommand = new RelayCommand(ExecuteAddContractorCommandAction);
-                return _addContractorCommand;
+                new ContractorWindow().Show();
+                window.Close();
+                
             }
         }
 
-        private void ExecuteAddContractorCommandAction()
-        {
-            new AddContractorView().Show();
-        }
+        private RelayCommand _showContractorCommand;
 
-        private RelayCommand _showContractorListCommand;
-
-        public RelayCommand ShowContractorListCommand
+        public RelayCommand ShowContractorCommand
         {
             get
             {
-                if (_showContractorListCommand == null)
-                    _showContractorListCommand = new RelayCommand(ExecuteShowContractorListCommandAction);
-                return _showContractorListCommand;
+                if (_showContractorCommand == null)
+                    _showContractorCommand = new RelayCommand(ExecuteShowContractorCommandAction);
+                return _showContractorCommand;
             }
         }
 
-        private void ExecuteShowContractorListCommandAction()
+        private void ExecuteShowContractorCommandAction()
         {
             new MainView().Show();
         }

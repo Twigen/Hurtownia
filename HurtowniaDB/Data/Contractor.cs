@@ -9,6 +9,7 @@ namespace Database.Data
     [Table("Contractor")]
     public partial class Contractor
     {
+        [Key]
         public int ID { get; set; }
 
         [Required]

@@ -1,0 +1,42 @@
+﻿<Window x:Class="Hurtownia.ContractorWindow"
+        x:Name="Contractor"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Hurtownia"
+        xmlns:viewModels="clr-namespace:Hurtownia.ViewModels"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="Kontrachent" Height="300" Width="331.2">
+    <Grid>
+        <Grid.DataContext>
+            <viewModels:ContractorViewModel/>
+        </Grid.DataContext>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*">
+            </RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,0" Grid.Row="0" Grid.ColumnSpan="1">
+            <StackPanel>
+                <Button HorizontalContentAlignment="Stretch" Content="1. Opis podsystemu" FontSize="30"/>
+                <Label Content="2. OBSLUGA KARTOTEKI" FontSize="30"/>
+                <Expander>
+                    <StackPanel>
+                        <Button FontSize="30" HorizontalContentAlignment="Left" Content="Aktualizacja"  Command="{Binding Path=AddContractorCommand}"/>
+                        <Button FontSize="30" HorizontalContentAlignment="Left" Content="Lista/Wydruk"   Command="{Binding Path=ShowContractorListCommand}"/>
+                    </StackPanel>
+                </Expander>
+                <Button FontSize="30" Content="3. ZOBOWIAZANIA"/>
+                <Button FontSize="30" Content="4. SLOWNIKI"/>
+                <Button FontSize="30" Content="5. WYDAWNICTWA"/>
+                <Button FontSize="25" Content="POWROT"  Command="{Binding CloseWindowCommand, Mode=OneWay}" 
+                CommandParameter="{Binding ElementName=Contractor}" ></Button>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

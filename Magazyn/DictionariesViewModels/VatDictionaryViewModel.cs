@@ -69,5 +69,22 @@ namespace Magazyn.DictionariesViewModels
                 RaisePropertyChanged(_selectedVatItemPropertyName);
             }
         }
+
+        private RelayCommand _showAddVatCommand;
+
+        public RelayCommand ShowAddVatCommand
+        {
+            get
+            {
+                if (_showAddVatCommand == null)
+                    _showAddVatCommand = new RelayCommand(ExecuteShowAddVatCommandAction);
+                return _showAddVatCommand;
+            }
+        }
+
+        private void ExecuteShowAddVatCommandAction()
+        {
+            new AddVatWindow().Show();
+        }
     }
 }

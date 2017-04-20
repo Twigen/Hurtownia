@@ -24,7 +24,7 @@
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <TextBlock  Text="Vat:"></TextBlock>
-                    <TextBox Text="{Binding Path=Storehouse.Vat}" Width="20" Margin="5"></TextBox>
+                    <ComboBox SelectedItem="{Binding Path=SelectedVatItem}" ItemsSource="{Binding Path=VatList}" Width="50"></ComboBox>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <TextBlock  Text="Cena Zakupu:"></TextBlock>
@@ -48,7 +48,7 @@
             <StackPanel Orientation="Horizontal">
                 <StackPanel Orientation="Horizontal">
                     <TextBlock  Text="Jme:"></TextBlock>
-                    <TextBox Text="{Binding Path=Storehouse.Jme}" Width="30" Margin="5"></TextBox>
+                    <ComboBox ItemsSource="{Binding Path=JmeList}" SelectedItem="{Binding Path=SelectedJmeItem }" Width="100"></ComboBox>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <TextBlock  Text="Stan P.I.:"></TextBlock>

@@ -34,5 +34,18 @@ namespace Magazyn.DictionariesViewModels
                RaisePropertyChanged(_kodPropertyName);
            }
        }
+
+       private const string _IDPropertyName = "ID";
+       private int _ID;
+
+       public int ID
+       {
+           get { return _ID; }
+           set
+           {
+               _ID = value;
+               RaisePropertyChanged(_IDPropertyName);
+           }
+       }
     }
 }

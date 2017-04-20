@@ -11,7 +11,7 @@ namespace HurtowniaDB.Repositories
 {
     public class StorehouseRepository
     {
-        public bool AddStorehouseItem(Storehouse storehouse)
+        public bool AddStorehouseItem(Storehouse storehouse,int vat, string jme)
         {
             try
             {
@@ -21,7 +21,8 @@ namespace HurtowniaDB.Repositories
                     if (ValidateStorehouseItem(storehouse))
                     {
 
-                        storehouse.SPIS = null;
+                        storehouse.VAT = vat.ToString();
+                        storehouse.JME = jme;
                         context.Storehouse.Add(storehouse);
                         context.SaveChanges();
                         return true;
@@ -50,6 +51,11 @@ namespace HurtowniaDB.Repositories
                 }
                 throw raise;
             }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+                throw exception;
+            }
         }
 
 
@@ -69,7 +75,7 @@ namespace HurtowniaDB.Repositories
                 return context.Storehouse.ToList();
         }
 
-
+//bool powinien byc
         public void EditStorehouseItem(Storehouse storehouse)
         {
             using (var context = new EntityDataModel())
